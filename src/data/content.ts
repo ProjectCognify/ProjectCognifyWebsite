@@ -98,20 +98,17 @@ export interface TeamMember {
 export const team: TeamMember[] = [
   {
     name: "Jonathan",
-    role: "Research Lead",
-    photo: "photo-1507003211169-0a1dd7228f2d",
-    bio: "I'm a junior who started thinking about this after noticing how differently I could dedicate myself depending on whether I was doing things alone or with others, that was what really started Cognify. My responsibilities include being the research lead, idea producer, manager for Jeremy and Ryan, and the founder of Cognify. I've never done formal research before this so i'm learning as I go, but I will always try to be honest about what I don't know yet.",
+    role: "Founder, Strategy and Planning Lead",
+    bio: "I'm a junior who started thinking about this after noticing how differently I could dedicate myself depending on whether I was doing things alone or with others, that was what really started Cognify. My responsibilities include being the strategy lead, idea producer, manager for Jeremy and Ryan, and the founder of Cognify. I've never done formal research before this so i'm learning as I go, but I will always try to be honest about what I don't know yet.",
   },
   {
     name: "Jeremy",
-    role: "Engineering Lead",
-    photo: "photo-1506794778202-cad84cf45f1d",
+    role: "Co-Founder and Engineering Lead",
     bio: "I've been coding since eighth grade, mostly self-taught through projects. Building Cohort is the most technically demanding thing I've done — real-time state synchronization is harder than it sounds, and I've rewritten the sync layer twice already. I'm keeping a log of technical decisions in the devlog, because I think that's part of the research record even if it isn't the main focus. When the project is done, the code will be open source.",
   },
   {
     name: "Ryan",
-    role: "Outreach Lead",
-    photo: "photo-1500648767791-00dcc994a43e",
+    role: "Co-Founder and Outreach Lead",
     bio: "I handle participant recruitment, communications, and keeping us connected to the students we're studying. Getting 30 people to fill out a survey sounds straightforward and is not. A lot of my work is explaining the project honestly — we're students doing this ourselves, not affiliated with any university. I also manage our Instagram, which I update when there's something worth reporting rather than on a fixed schedule.",
   },
 ];
