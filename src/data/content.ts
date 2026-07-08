@@ -100,7 +100,7 @@ export const team: TeamMember[] = [
     name: "Jonathan",
     role: "Research Lead",
     photo: "photo-1507003211169-0a1dd7228f2d",
-    bio: "I'm a junior who started thinking about this after noticing how differently I could focus depending on whether I was studying alone or with other people nearby. That observation felt worth investigating seriously. My responsibilities include designing the survey instrument, coordinating the literature review, and writing the final paper. I've never done formal research before this. I'm learning as I go, and I try to be honest in the devlog about what I don't know yet.",
+    bio: "I'm a junior who started thinking about this after noticing how differently I could dedicate myself depending on whether I was doing things alone or with others, that was what really started Cognify. My responsibilities include being the research lead, idea producer, manager for Jeremy and Ryan, and the founder of Cognify. I've never done formal research before this so i'm learning as I go, but I will always try to be honest about what I don't know yet.",
   },
   {
     name: "Jeremy",
