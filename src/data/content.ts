@@ -1,6 +1,9 @@
 // Shared content for Project Cognify.
 // Devlog posts, team, and sources live here so pages stay in sync.
 
+/** A body block is either a paragraph (string) or a pull-quote. */
+export type DevlogBlock = string | { quote: string };
+
 export interface DevlogPost {
   id: string;
   date: string;
@@ -8,81 +11,181 @@ export interface DevlogPost {
   title: string;
   author: string;
   excerpt: string;
-  body: string[];
+  body: DevlogBlock[];
 }
 
+// Newest first — the Devlog and home page both read this order.
 export const devlogPosts: DevlogPost[] = [
   {
-    id: "week-14",
-    date: "July 1, 2026",
-    dateISO: "2026-07-01",
-    title: "Week 14: First look at the survey data",
+    id: "week-22",
+    date: "July 8, 2026",
+    dateISO: "2026-07-08",
+    title: "Week 22: Building a Home for the Project",
+    author: "Jeremy",
+    excerpt:
+      "By the end of Phase I we had notebooks, research papers, interview notes, survey results, meeting documents, and ideas spread across different places.",
+    body: [
+      "By the end of Phase I we had notebooks, research papers, interview notes, survey results, meeting documents, and ideas spread across different places.",
+      "We realized we needed more than a folder.",
+      "We needed a place that told the story of the project.",
+      "This website isn't meant to be a portfolio or a showcase.",
+      "It's a record of how our thinking evolves.",
+      "As we move into Phase II, we'll continue documenting the questions we ask, the decisions we make, and the evidence that shapes them.",
+      "Hopefully, by the time this project is finished, someone will be able to read these pages from beginning to end and understand not just what we built, but why we built it.",
+    ],
+  },
+  {
+    id: "week-21",
+    date: "July 5, 2026",
+    dateISO: "2026-07-05",
+    title: "Week 21: When the Evidence Changed Our Thinking",
     author: "Jonathan",
     excerpt:
-      "We finished collecting responses from 30 students across three grade levels last week. The numbers are more complicated than we expected — and honestly, more interesting.",
+      "By this point we had completed our literature review, collected survey responses, and finished our first round of interviews. One pattern kept appearing.",
     body: [
-      "We finished collecting responses from 30 students across three grade levels last week. The numbers are more complicated than we expected — and honestly, more interesting.",
-      "The survey asked students to rate how often they experienced specific types of distraction during study sessions: social media notifications, background noise, nearby conversations, and internal mind-wandering. We also asked about their subjective sense of productivity and how long they could maintain focus before checking their phone.",
-      "The data surprised us in two ways. First, students consistently underestimate how often they check their phones. When asked to estimate checks per hour, the median response was 4. But in the follow-up question — where we asked them to reconstruct their last study session in detail — the implied frequency was closer to 8–10. We're not sure how to interpret this gap yet. It could be inaccurate recall, or it could be that many phone checks don't register as deliberate decisions.",
-      "Second, the relationship between reported anxiety and focus difficulty is stronger than we expected, but not in a clean linear way. Students who rated finals-season anxiety as 'high' or 'very high' also reported significantly shorter focus spans — but with notable exceptions. Some high-anxiety students reported surprisingly long focus spans and attributed this to what they called 'pressure-induced focus': a state where the stakes were high enough to override the pull of distraction. We want to understand this better.",
-      "Jeremy is building a simple visualization of the results. Ryan is coordinating the next round of interviews. I'm going back through Twenge (2017) and a few other sources to see if the anxiety-focus pattern appears in prior literature.",
-      "One thing we haven't figured out yet: how to control for the fact that our 30 respondents are all from the same school and were recruited through personal networks. The sample is almost certainly biased toward students who are already somewhat reflective about their study habits. We'll acknowledge this limitation in the paper, but I'm also wondering if there's anything we can do to partially correct for it before we're done.",
+      "By this point we had completed our literature review, collected survey responses, and finished our first round of interviews.",
+      "One pattern kept appearing.",
+      "Our original hypothesis focused heavily on FOMO.",
+      "The research pointed toward something broader.",
+      "Motivation, social presence, and accountability appeared repeatedly across the literature and our own findings. Rather than asking whether FOMO improves focus, we found ourselves asking a different question:",
+      {
+        quote:
+          "Can simply knowing that other students are working alongside you make it easier to stay engaged?",
+      },
+      "That isn't the same question we started with.",
+      "It's probably a better one.",
+      "Research is supposed to change your thinking.",
+      "This was the first time we felt it happening.",
+    ],
+  },
+  {
+    id: "week-19",
+    date: "June 24, 2026",
+    dateISO: "2026-06-24",
+    title: "Week 19: Listening Before Solving",
+    author: "Jonathan",
+    excerpt:
+      "After weeks of preparation, our survey went live and interviews began. This was the first time we were hearing perspectives beyond our own.",
+    body: [
+      "After weeks of preparation, our survey went live and interviews began.",
+      "This was the first time we were hearing perspectives beyond our own.",
+      "Some responses confirmed things we expected.",
+      "Others challenged them completely.",
+      "Students talked about procrastination differently than we imagined. Some described losing focus because they felt overwhelmed. Others said they actually focused better when they knew friends were studying at the same time.",
+      "The more conversations we had, the less interested we became in proving our original hypothesis.",
+      "We became more interested in understanding what was actually happening.",
+    ],
+  },
+  {
+    id: "week-15",
+    date: "May 28, 2026",
+    dateISO: "2026-05-28",
+    title: "Week 15: Why We Started Sharing Everything",
+    author: "Ryan",
+    excerpt:
+      "One question we kept asking ourselves was whether we should wait until we had results before talking about the project. Eventually we decided not to.",
+    body: [
+      "One question we kept asking ourselves was whether we should wait until we had results before talking about the project.",
+      "Eventually we decided not to.",
+      "We launched our Instagram account because we wanted to document the process, not just the outcome.",
+      "Research rarely moves in a straight line. Ideas change. Assumptions get challenged. Sometimes the most interesting part isn't the conclusion. It's how you got there.",
+      "If Project Cognify was going to be about learning, then documenting that learning felt just as important as building the final product.",
     ],
   },
   {
     id: "week-12",
-    date: "June 17, 2026",
-    dateISO: "2026-06-17",
-    title: "Week 12: Cohort prototype, first internal test",
-    author: "Jeremy",
-    excerpt:
-      "I got a working version of Cohort running this week. It's rough — the UI is barely styled and the real-time sync breaks if two people join too fast — but it works well enough to test the core idea.",
-    body: [
-      "I got a working version of Cohort running this week. It's rough — the UI is barely styled and the real-time sync breaks if two people join too fast — but it works well enough to test the core idea.",
-      "The hard part, as expected, was the real-time presence layer. When someone marks themselves as focusing, everyone else in the session needs to see it within a second or so, and it has to survive people closing laptops and reopening them. I've rewritten this part twice. The first version kept state on the client and fell apart the moment two people disagreed about who was present. The current version keeps a single source of truth on the server and treats each client as a subscriber.",
-      "The three of us ran a session for an hour on Sunday. It's a strange feeling — you can see two dots that say your friends are working, and that's it, and somehow that's enough to make you not want to be the one who stops. That's exactly the effect we're trying to measure, so it was encouraging to feel it ourselves. But three friends who built the thing are the worst possible test subjects, so I'm not reading much into it yet.",
-    ],
-  },
-  {
-    id: "week-10",
-    date: "June 3, 2026",
-    dateISO: "2026-06-03",
-    title: "Week 10: Reading Twenge, rethinking our hypothesis",
+    date: "May 6, 2026",
+    dateISO: "2026-05-06",
+    title: "Week 12: Designing the Study",
     author: "Jonathan",
     excerpt:
-      "We've been reading more seriously into the academic literature this month. Jean Twenge's work on generational attention changes is directly relevant, but it also raises some uncomfortable questions about our initial framing.",
+      "Designing a survey turned out to be much harder than we expected. Writing questions isn't difficult. Writing questions that don't push people toward an answer is.",
     body: [
-      "We've been reading more seriously into the academic literature this month. Jean Twenge's work on generational attention changes is directly relevant, but it also raises some uncomfortable questions about our initial framing.",
-      "Our original hypothesis leaned hard on the idea that smartphones are the primary cause of declining adolescent focus. The more we read, the less confident we are that the evidence supports a claim that strong. Odgers and others make a careful case that a lot of the smartphones-ruin-teenagers literature overstates causation from correlational data. We don't want to make the same mistake in the other direction.",
-      "So we're softening the framing. Instead of 'phones are the cause,' we're asking a narrower and more answerable question: does shared social presence improve focus, independent of whatever is causing focus to be hard in the first place? That question doesn't require us to settle the phones debate, which is good, because we're not going to settle it.",
+      "Designing a survey turned out to be much harder than we expected.",
+      "Writing questions isn't difficult.",
+      "Writing questions that don't accidentally push people toward a particular answer is.",
+      "The same was true for interviews.",
+      "Every time we thought we had a good question, we'd realize it assumed something we hadn't actually proven yet.",
+      "Around the same time, we started meeting regularly as a team. Weekly discussions became less about assigning work and more about challenging each other's assumptions before moving forward.",
+      "The project started feeling less like an idea and more like a real research study.",
     ],
   },
   {
     id: "week-8",
-    date: "May 20, 2026",
-    dateISO: "2026-05-20",
-    title: "Week 8: Outreach update and what actually got people to respond",
-    author: "Ryan",
+    date: "April 8, 2026",
+    dateISO: "2026-04-08",
+    title: "Week 8: Choosing Research Before Building",
+    author: "Jonathan",
     excerpt:
-      "Getting 30 students to complete a 12-question survey turned out to be harder than expected. Here's what worked and what didn't, in case it's useful to anyone.",
+      "Like most student projects, our first instinct was to start designing features. We filled pages with ideas before realizing we didn't fully understand the problem.",
     body: [
-      "Getting 30 students to complete a 12-question survey turned out to be harder than expected. Here's what worked and what didn't, in case it's useful to anyone.",
-      "What didn't work: posting a link in group chats. People say they'll do it and then don't. A link with no face attached to it is the easiest thing in the world to ignore. Our completion rate from cold links was somewhere under 10 percent.",
-      "What worked: asking people directly, in person, and waiting while they did it. Almost everyone who started the survey with me standing there finished it. That's not scalable and it's not glamorous, but it's the honest answer. The other thing that helped was being clear that we're students doing this ourselves, not a company harvesting data. People relaxed once they understood that.",
+      "Like most student projects, our first instinct was to start designing features.",
+      "Shared study rooms.",
+      "Focus timers.",
+      "Accountability systems.",
+      "We filled pages with ideas before realizing we were trying to solve a problem we didn't fully understand.",
+      "So we made a decision that has influenced every step since.",
+      "We wouldn't build anything until we had spent time understanding the problem first.",
+      "That meant reading existing research, designing surveys, conducting interviews, and letting the evidence shape whatever came next.",
+      "Looking back, this was probably the most important decision we made.",
     ],
   },
   {
-    id: "week-6",
-    date: "May 6, 2026",
-    dateISO: "2026-05-06",
-    title: "Week 6: Defining what we mean by 'focus'",
+    id: "week-5",
+    date: "March 18, 2026",
+    dateISO: "2026-03-18",
+    title: "Week 5: Finding the Right Team",
     author: "Jonathan",
     excerpt:
-      "Before we could write a survey, we had to agree on what we were actually measuring. It took us about three weeks to realize we were using the word 'focus' to mean three different things.",
+      "I knew I didn't want to work on this alone. When I shared the idea, neither of them asked what app we were going to build. They asked what we actually knew.",
     body: [
-      "Before we could write a survey, we had to agree on what we were actually measuring. It took us about three weeks to realize we were using the word 'focus' to mean three different things.",
-      "One of us meant duration: how long you can stay on a task. One meant depth: how absorbed you are while you're on it. One meant resistance: how well you shrug off an interruption and get back. These are related but they are not the same thing, and a survey question that blurs them gives you data you can't interpret.",
-      "We ended up writing separate questions for each, and being explicit in the paper about which one we mean where. It felt slow at the time. It's the single most useful thing we did in the first two months.",
+      "I knew I didn't want to work on this alone.",
+      "Jeremy and Ryan had worked with me during a Game Jam the previous year. We approached problems differently, but we worked well together. More importantly, everyone was willing to challenge ideas instead of simply agreeing with them.",
+      "When I shared the idea behind Project Cognify, neither of them asked what app we were going to build.",
+      "They asked what we actually knew.",
+      'It turned out the honest answer was "not much."',
+      "That conversation ended up shaping the project more than any feature discussion we had afterward.",
+    ],
+  },
+  {
+    id: "week-3",
+    date: "March 3, 2026",
+    dateISO: "2026-03-03",
+    title: "Week 3: Deciding It Was Worth Investigating",
+    author: "Jonathan",
+    excerpt:
+      "For a while this was just a note in a notebook. The more I thought about it, the more it seemed like the question wasn't really about productivity.",
+    body: [
+      "For a while this was just a note in a notebook.",
+      "The more I thought about it, the more it seemed like the question wasn't really about productivity. It sat somewhere between psychology, education, and technology, and I couldn't find a simple explanation that felt satisfying.",
+      "Around the same time I started reading about attention, motivation, and the fear of missing out. The first hypothesis slowly took shape.",
+      {
+        quote:
+          "What if the same psychological forces that keep people engaged in games could also be used, ethically, to help students stay focused while learning?",
+      },
+      "I still had no idea whether the hypothesis was right.",
+      "The important realization was that it was testable.",
+      "That felt like enough reason to keep going.",
+    ],
+  },
+  {
+    id: "week-1",
+    date: "February 18, 2026",
+    dateISO: "2026-02-18",
+    title: "Week 1: The Question That Wouldn't Go Away",
+    author: "Jonathan",
+    excerpt:
+      "Project Cognify started with something that didn't seem particularly important. One night, Jeremy and I stayed up until about two in the morning playing a game.",
+    body: [
+      "Project Cognify started with something that didn't seem particularly important.",
+      "One night, Jeremy and I stayed up until about two in the morning playing a newly released Roblox update. The next day I kept thinking about how naturally those few hours had disappeared. That wasn't unusual. What felt unusual was how different that experience was from sitting down to do homework.",
+      "The obvious explanation is that games are fun and homework isn't. But that answer felt incomplete. Plenty of things we enjoy still require effort, and plenty of important things never seem urgent enough to hold our attention.",
+      "The question became less about games and more about attention itself.",
+      {
+        quote:
+          "Why can some experiences keep us completely engaged while others require constant self-control?",
+      },
+      "I wrote the question down because I didn't have a good answer. Looking back, that was probably the moment Project Cognify started.",
     ],
   },
 ];
@@ -92,27 +195,38 @@ export interface TeamMember {
   role: string;
   /** Unsplash photo id (placeholder until real photos are supplied) */
   photo: string;
-  bio: string;
+  bio: string[];
+  quote: string;
 }
 
 export const team: TeamMember[] = [
   {
     name: "Jonathan",
-    role: "Research Lead",
+    role: "Founder",
     photo: "photo-1507003211169-0a1dd7228f2d",
-    bio: "I'm a junior who started thinking about this after noticing how differently I could focus depending on whether I was studying alone or with other people nearby. That observation felt worth investigating seriously. My responsibilities include designing the survey instrument, coordinating the literature review, and writing the final paper. I've never done formal research before this. I'm learning as I go, and I try to be honest in the devlog about what I don't know yet.",
+    bio: [
+      "Jonathan started Project Cognify after asking a simple question: Why is it so easy to spend hours on a game, but so difficult to focus on homework?",
+      "That question sparked the project and continues to guide its direction. He enjoys researching ideas, asking questions, and understanding how technology and human behavior influence the way we learn.",
+    ],
+    quote: "The best ideas usually start with a simple question.",
   },
   {
     name: "Jeremy",
-    role: "Engineering Lead",
+    role: "Co-Founder",
     photo: "photo-1506794778202-cad84cf45f1d",
-    bio: "I've been coding since eighth grade, mostly self-taught through projects. Building Cohort is the most technically demanding thing I've done — real-time state synchronization is harder than it sounds, and I've rewritten the sync layer twice already. I'm keeping a log of technical decisions in the devlog, because I think that's part of the research record even if it isn't the main focus. When the project is done, the code will be open source.",
+    bio: [
+      "Jeremy enjoys solving problems and turning ideas into something people can actually use. As the project moves from research into design and development, he's excited to help bring the team's ideas to life.",
+    ],
+    quote: "Every solution starts with understanding the problem.",
   },
   {
     name: "Ryan",
-    role: "Outreach Lead",
+    role: "Co-Founder",
     photo: "photo-1500648767791-00dcc994a43e",
-    bio: "I handle participant recruitment, communications, and keeping us connected to the students we're studying. Getting 30 people to fill out a survey sounds straightforward and is not. A lot of my work is explaining the project honestly — we're students doing this ourselves, not affiliated with any university. I also manage our Instagram, which I update when there's something worth reporting rather than on a fixed schedule.",
+    bio: [
+      "Ryan enjoys working with people and sharing ideas. He helps document the team's progress, gather feedback, and communicate what Project Cognify is learning along the way.",
+    ],
+    quote: "Learning is better when you share the journey.",
   },
 ];
 

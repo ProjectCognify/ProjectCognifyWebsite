@@ -17,10 +17,9 @@ import { devlogPosts } from "../data/content";
       why high schoolers struggle to maintain sustained focus during schoolwork,
       and specifically whether engineered digital distraction is the primary
       cause or one factor in a more complicated picture. Three students —
-      <strong>Jonathan</strong> (Research Lead), <strong>Jeremy</strong>
-      (Engineering Lead), and <strong>Ryan</strong> (Outreach Lead) — are
-      conducting the project independently, without institutional backing or
-      funding. We have surveyed 30 students, conducted preliminary interviews,
+      <strong>Jonathan</strong> (Founder), and <strong>Jeremy</strong> and
+      <strong>Ryan</strong> (Co-Founders) — are conducting the project
+      independently, without institutional backing or funding. We have surveyed 30 students, conducted preliminary interviews,
       reviewed academic literature on adolescent attention and smartphone use,
       and are currently building a lightweight research prototype called
       <a href="/cohort">Cohort</a>: a web tool that lets small groups of friends
@@ -35,7 +34,7 @@ import { devlogPosts } from "../data/content";
     <p class="label">Recent devlog entries</p>
     <div class="entries">
       {
-        devlogPosts.map((post) => (
+        devlogPosts.slice(0, 4).map((post) => (
           <article class="entry">
             <p class="meta">
               <time datetime={post.dateISO}>{post.date}</time>

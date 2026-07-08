@@ -1,73 +1,57 @@
 ---
 import Base from "../layouts/Base.astro";
 import { devlogPosts } from "../data/content";
-
-const [latest, ...earlier] = devlogPosts;
 ---
 
 <Base title="Devlog">
   <h1>Devlog</h1>
-  <p class="label">Weekly research notes, reverse chronological order</p>
+  <p class="label">A research journal, in reverse chronological order</p>
 
-  <article id={latest.id} class="post prose">
-    <p class="meta">
-      <time datetime={latest.dateISO}>{latest.date}</time>
-      <span>—</span>
-      <span>{latest.author}</span>
-    </p>
-    <h2 class="post__title">{latest.title}</h2>
-    {latest.body.map((para) => <p>{para}</p>)}
-  </article>
-
-  <section class="earlier">
-    <p class="label">Earlier entries</p>
-    <div class="entries">
-      {
-        earlier.map((post) => (
-          <article id={post.id} class="entry prose">
-            <p class="meta">
-              <time datetime={post.dateISO}>{post.date}</time>
-              <span>—</span>
-              <span>{post.author}</span>
-            </p>
-            <h3 class="earlier__title">{post.title}</h3>
-            {post.body.map((para) => (
-              <p class="earlier__para">{para}</p>
-            ))}
-          </article>
-        ))
-      }
-    </div>
-  </section>
+  <div class="log">
+    {
+      devlogPosts.map((post, i) => (
+        <article id={post.id} class="post prose">
+          {i > 0 && <hr class="post__rule" />}
+          <p class="meta">
+            <time datetime={post.dateISO}>{post.date}</time>
+            <span>—</span>
+            <span>{post.author}</span>
+          </p>
+          <h2 class="post__title">{post.title}</h2>
+          {post.body.map((block) =>
+            typeof block === "string" ? (
+              <p>{block}</p>
+            ) : (
+              <blockquote class="pullquote">{block.quote}</blockquote>
+            )
+          )}
+        </article>
+      ))
+    }
+  </div>
 </Base>
 
 <style>
-  .post {
-    margin-top: 0;
-    padding-bottom: 1rem;
+  .post__rule {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 3.5rem 0;
   }
 
   .post__title {
     font-size: 1.3rem;
     line-height: 1.35;
-    margin: 0.25rem 0 1.5rem;
+    margin: 0.35rem 0 1.25rem;
   }
 
-  .earlier {
-    margin-top: 3.5rem;
-  }
-
-  .earlier .entries {
-    margin-top: 2rem;
-  }
-
-  .earlier__title {
-    font-size: 1rem;
-    margin: 0.15rem 0 0.75rem;
-  }
-
-  .earlier__para {
-    font-size: 0.95rem !important;
-    color: var(--muted-foreground);
+  .pullquote {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--foreground);
+    margin: 1.5rem 0;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--primary);
   }
 </style>
