@@ -1,0 +1,183 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Contact">
+  <h1>Contact</h1>
+  <p class="label">Get in touch</p>
+
+  <div class="prose">
+    <p>
+      If you are a researcher, teacher, student, or anyone else who wants to
+      discuss the project — or if you are a high school student interested in
+      participating in Cohort testing sessions — we would like to hear from you.
+    </p>
+
+    <dl class="contact">
+      <div>
+        <dt>Email</dt>
+        <dd><a href="mailto:team@projectcognify.com">team@projectcognify.com</a></dd>
+      </div>
+      <div>
+        <dt>Instagram</dt>
+        <dd>
+          <a href="https://instagram.com/projectcognify">@projectcognify</a>
+        </dd>
+      </div>
+    </dl>
+
+    <p class="muted note">
+      We typically respond within a few days. Response time during finals week
+      may be longer, for obvious reasons.
+    </p>
+  </div>
+
+  <!--
+    Netlify Forms: a plain HTML form (no JavaScript). Netlify detects it at
+    deploy time and stores every submission under Site → Forms in the
+    dashboard. On success it redirects to /thanks. The bot-field is a
+    honeypot for spam.
+  -->
+  <section class="form-block">
+    <p class="label">Send us a message</p>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/thanks"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hp" aria-hidden="true">
+        <label>
+          Don’t fill this out if you’re human:
+          <input name="bot-field" tabindex="-1" autocomplete="off" />
+        </label>
+      </p>
+
+      <div class="field">
+        <label for="email">Your email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="you@example.com"
+        />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          placeholder="What would you like to tell us?"></textarea>
+      </div>
+
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+</Base>
+
+<style>
+  .contact {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    margin: 1.5rem 0;
+  }
+
+  .contact div {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.25rem 0;
+  }
+
+  .contact dt {
+    color: var(--muted-foreground);
+  }
+
+  .contact dd {
+    margin: 0;
+  }
+
+  .note {
+    font-size: 0.95rem !important;
+    margin-top: 1.25rem;
+  }
+
+  /* ---- Form ---- */
+  .form-block {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  form {
+    font-family: var(--font-sans);
+    max-width: 30rem;
+  }
+
+  .field {
+    margin-bottom: 1.25rem;
+  }
+
+  .field label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: var(--muted-foreground);
+    margin-bottom: 0.4rem;
+  }
+
+  input[type="email"],
+  textarea {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--foreground);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius, 0.625rem) - 4px);
+    padding: 0.65rem 0.75rem;
+  }
+
+  textarea {
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+    border-color: var(--primary);
+  }
+
+  button[type="submit"] {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-foreground, #fff);
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: calc(var(--radius, 0.625rem) - 4px);
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    opacity: 0.92;
+  }
+
+  /* Honeypot — hidden from people, visible to bots */
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+</style>

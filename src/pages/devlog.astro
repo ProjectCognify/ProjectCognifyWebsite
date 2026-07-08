@@ -1,0 +1,73 @@
+---
+import Base from "../layouts/Base.astro";
+import { devlogPosts } from "../data/content";
+
+const [latest, ...earlier] = devlogPosts;
+---
+
+<Base title="Devlog">
+  <h1>Devlog</h1>
+  <p class="label">Weekly research notes, reverse chronological order</p>
+
+  <article id={latest.id} class="post prose">
+    <p class="meta">
+      <time datetime={latest.dateISO}>{latest.date}</time>
+      <span>—</span>
+      <span>{latest.author}</span>
+    </p>
+    <h2 class="post__title">{latest.title}</h2>
+    {latest.body.map((para) => <p>{para}</p>)}
+  </article>
+
+  <section class="earlier">
+    <p class="label">Earlier entries</p>
+    <div class="entries">
+      {
+        earlier.map((post) => (
+          <article id={post.id} class="entry prose">
+            <p class="meta">
+              <time datetime={post.dateISO}>{post.date}</time>
+              <span>—</span>
+              <span>{post.author}</span>
+            </p>
+            <h3 class="earlier__title">{post.title}</h3>
+            {post.body.map((para) => (
+              <p class="earlier__para">{para}</p>
+            ))}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .post {
+    margin-top: 0;
+    padding-bottom: 1rem;
+  }
+
+  .post__title {
+    font-size: 1.3rem;
+    line-height: 1.35;
+    margin: 0.25rem 0 1.5rem;
+  }
+
+  .earlier {
+    margin-top: 3.5rem;
+  }
+
+  .earlier .entries {
+    margin-top: 2rem;
+  }
+
+  .earlier__title {
+    font-size: 1rem;
+    margin: 0.15rem 0 0.75rem;
+  }
+
+  .earlier__para {
+    font-size: 0.95rem !important;
+    color: var(--muted-foreground);
+  }
+</style>

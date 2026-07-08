@@ -1,0 +1,101 @@
+---
+import Base from "../layouts/Base.astro";
+import { team } from "../data/content";
+---
+
+<Base title="Team">
+  <h1>The team</h1>
+  <p class="label">Three students, seven months</p>
+
+  <div class="members">
+    {
+      team.map((member) => (
+        <article class="member">
+          <img
+            class="member__photo"
+            src={`https://images.unsplash.com/${member.photo}?w=168&h=168&fit=crop&auto=format`}
+            alt={`${member.name}, ${member.role}`}
+            width="84"
+            height="84"
+            loading="lazy"
+          />
+          <div class="member__body">
+            <p class="member__head">
+              <span class="member__name">{member.name}</span>
+              <span class="member__role">{member.role}</span>
+            </p>
+            <p class="member__bio">{member.bio}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .members {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .member {
+    display: flex;
+    gap: 1.75rem;
+    align-items: flex-start;
+  }
+
+  /* Grayscale placeholder photos (Unsplash) until real photos are added */
+  .member__photo {
+    flex: 0 0 84px;
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    filter: grayscale(100%) contrast(1.05);
+  }
+
+  .member__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .member__head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    margin: 0 0 0.75rem;
+  }
+
+  .member__name {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+  }
+
+  .member__role {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    color: var(--muted-foreground);
+  }
+
+  .member__bio {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  @media (max-width: 34rem) {
+    .member {
+      gap: 1.25rem;
+    }
+
+    .member__photo {
+      flex-basis: 60px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>

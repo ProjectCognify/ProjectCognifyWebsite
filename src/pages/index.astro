@@ -1,17 +1,75 @@
 ---
-
+import Base from "../layouts/Base.astro";
+import { devlogPosts } from "../data/content";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Project Cognify">
+  <header>
+    <h1 class="hero-title">Project Cognify</h1>
+    <p class="subtitle">
+      Investigating adolescent attention in an age of engineered distraction
+    </p>
+  </header>
+
+  <div class="prose intro">
+    <p>
+      Project Cognify is a seven-month student research project investigating
+      why high schoolers struggle to maintain sustained focus during schoolwork,
+      and specifically whether engineered digital distraction is the primary
+      cause or one factor in a more complicated picture. Three students —
+      <strong>Jonathan</strong> (Research Lead), <strong>Jeremy</strong>
+      (Engineering Lead), and <strong>Ryan</strong> (Outreach Lead) — are
+      conducting the project independently, without institutional backing or
+      funding. We have surveyed 30 students, conducted preliminary interviews,
+      reviewed academic literature on adolescent attention and smartphone use,
+      and are currently building a lightweight research prototype called
+      <a href="/cohort">Cohort</a>: a web tool that lets small groups of friends
+      study together in real time, sharing focus status without any competitive
+      or scoring mechanisms. The project ends with a written research paper. We
+      are not a startup. We are not a nonprofit. We are three students trying to
+      understand something real.
+    </p>
+  </div>
+
+  <section class="recent">
+    <p class="label">Recent devlog entries</p>
+    <div class="entries">
+      {
+        devlogPosts.map((post) => (
+          <article class="entry">
+            <p class="meta">
+              <time datetime={post.dateISO}>{post.date}</time>
+              <span>—</span>
+              <span>{post.author}</span>
+            </p>
+            <h3>
+              <a href={`/devlog#${post.id}`}>{post.title}</a>
+            </h3>
+            <p class="entry__excerpt">{post.excerpt}</p>
+            <a class="link-sm" href={`/devlog#${post.id}`}>
+              read more →
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .intro {
+    margin: 3.5rem 0;
+  }
+
+  .intro p {
+    font-size: 1.06rem;
+  }
+
+  .recent {
+    margin-top: 3.5rem;
+  }
+
+  .recent .entries {
+    margin-top: 2rem;
+  }
+</style>

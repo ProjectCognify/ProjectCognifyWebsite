@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "A seven-month student research project on adolescent focus and attention, run by three high school students.",
+} = Astro.props;
+
+const fullTitle =
+  title === "Project Cognify" ? title : `${title} — Project Cognify`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <Nav />
+    <main class="page">
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
