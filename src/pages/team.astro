@@ -11,14 +11,6 @@ import { team } from "../data/content";
     {
       team.map((member) => (
         <article class="member">
-          <img
-            class="member__photo"
-            src={`https://images.unsplash.com/${member.photo}?w=168&h=168&fit=crop&auto=format`}
-            alt={`${member.name}, ${member.role}`}
-            width="84"
-            height="84"
-            loading="lazy"
-          />
           <div class="member__body">
             <p class="member__head">
               <span class="member__name">{member.name}</span>
@@ -43,17 +35,6 @@ import { team } from "../data/content";
     display: flex;
     gap: 1.75rem;
     align-items: flex-start;
-  }
-
-  /* Grayscale placeholder photos (Unsplash) until real photos are added */
-  .member__photo {
-    flex: 0 0 84px;
-    width: 84px;
-    height: 84px;
-    object-fit: cover;
-    background: var(--muted);
-    border: 1px solid var(--border);
-    filter: grayscale(100%) contrast(1.05);
   }
 
   .member__body {
@@ -92,10 +73,5 @@ import { team } from "../data/content";
       gap: 1.25rem;
     }
 
-    .member__photo {
-      flex-basis: 60px;
-      width: 60px;
-      height: 60px;
-    }
   }
 </style>
