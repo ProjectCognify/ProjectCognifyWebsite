@@ -98,7 +98,7 @@ export interface TeamMember {
 export const team: TeamMember[] = [
   {
     name: "Jonathan",
-    role: "Founder, Strategy and Planning Lead",
+    role: "Founder, Strategy and Overall Success Lead",
     bio: "I'm a junior who started thinking about this after noticing how differently I could dedicate myself depending on whether I was doing things alone or with others, that was what really started Cognify. My responsibilities include being the strategy lead, idea producer, manager for Jeremy and Ryan, and the founder of Cognify. I've never done formal research before this so i'm learning as I go, but I will always try to be honest about what I don't know yet.",
   },
   {
