@@ -1,6 +1,78 @@
 ---
 import Base from "../layouts/Base.astro";
-import { sources } from "../data/content";
+
+const findings = [
+  {
+    lead: "73% of students report struggling to focus.",
+    rest: "Only 8 of 30 said focus was not a problem for them.",
+  },
+  {
+    lead: "80% said that once a distraction starts, it is hard to stop.",
+    rest: "This was the strongest single result in the survey, and it directly supports the idea that modern distractions are engineered to be hard to leave.",
+  },
+  {
+    lead: "The phone was the dominant distraction by far.",
+    rest: "More than 20 of 30 students named it specifically.",
+  },
+  {
+    lead: "Students can focus. The question is when.",
+    rest: "When we asked students to describe the last time they were deeply focused, most gave the same answer: studying for finals. Students focus when the stakes feel real and immediate. Everyday schoolwork does not create that feeling. Games and phones are engineered to create it constantly.",
+  },
+];
+
+const readingGroups = [
+  {
+    heading: "On FOMO",
+    items: [
+      {
+        title:
+          "Fear of missing out: A brief overview of origin, theoretical underpinnings and relationship with mental health (PMC)",
+        note: "The case against FOMO. Links it to lost sleep, anxiety, emotional tension, and reduced emotional control. The strongest counterweight to our original hypothesis.",
+      },
+      {
+        title:
+          "When Fear of Missing Out Becomes a Good Thing (Atlantis Press, ICCD 2020)",
+        note: "The study closest to our original idea. Found FOMO can be positive academically when students use the fear of falling behind as motivation to act. Small study, and we are careful not to lean on it too hard.",
+      },
+      {
+        title: "FoMO and learning engagement (PMC)",
+        note: "The most useful nuance we found. Self-control masks FOMO's effect on learning engagement, and there appear to be four distinct student profiles depending on whether FOMO is a stable trait or a momentary state. One-size-fits-all interventions probably will not work.",
+      },
+    ],
+  },
+  {
+    heading: "On attention and motivation",
+    items: [
+      {
+        title:
+          "Concentration effort, focus back effort, and mind wandering (PMC)",
+        note: 'The skill of noticing your mind has wandered and pulling it back ("focus back effort") is measurable and matters. Focus may be less about blocking distraction and more about recovering from it.',
+      },
+      {
+        title: "The behavioral neuroscience of motivation (PMC)",
+        note: "Foundational reading. Motivational drive is modulated by both internal states and external conditions. This is the theoretical basis for our interest in what makes stakes feel real in the moment.",
+      },
+      {
+        title: "Motivation and attention in the brain (PMC)",
+        note: "Motivation had a larger effect on reorienting attention than on initially directing it. Consistent with our survey: the hard part is coming back, not starting out.",
+      },
+      {
+        title:
+          "Study time, study strategies, and daily goal achievement (PubMed)",
+        note: "Students with better planning, monitoring, and concentration needed less time to reach their goals. Strategy beats raw hours.",
+      },
+    ],
+  },
+  {
+    heading: "On distraction",
+    items: [
+      {
+        title: "Digital distraction in the classroom (Wiley)",
+        note: "Smartphone and social media effects on academic distraction are conspicuously detrimental. Argues both self-regulatory and environmental interventions are needed. Neither alone is enough, which matches what our survey found about the phone-in-another-room strategy.",
+      },
+    ],
+  },
+];
 ---
 
 <Base title="Research">
@@ -8,74 +80,160 @@ import { sources } from "../data/content";
   <p class="label">Data, sources, and the eventual paper</p>
 
   <div class="prose">
-    <div class="block">
-      <p class="block-label">Survey data</p>
+    <section class="block">
+      <h2>Survey Findings</h2>
       <p>
-        Analysis of our initial 30-respondent survey is underway. Summary
-        statistics and charts will be posted here when complete. Anonymized raw
-        data will be available for download alongside the final paper.
+        We surveyed 30 students across three grade levels in June 2026. Full
+        summary statistics and charts are coming in August, and anonymized raw
+        data will be available for download alongside the final paper. Four
+        results already stand out:
       </p>
-      <p class="note">Expected: August 2026</p>
-    </div>
 
-    <div class="block">
-      <p class="block-label">Annotated reading list</p>
-      <div class="sources">
+      <ul class="findings">
         {
-          sources.map((source) => (
-            <div class="source">
-              <p class="citation">{source.citation}</p>
-              <p class="annotation">{source.note}</p>
-            </div>
+          findings.map((f) => (
+            <li>
+              <strong>{f.lead}</strong> {f.rest}
+            </li>
           ))
         }
-      </div>
-    </div>
+      </ul>
 
-    <div class="block">
-      <p class="block-label">Final paper</p>
-      <p class="muted">
-        Not yet complete. Target completion: January 2027. It will be posted here
-        as a PDF when finished, under an open license.
+      <p>One student described their strategy this way:</p>
+      <blockquote class="pullquote">
+        I end up waiting until the last moment and then finish everything. That
+        panic makes me focus better.
+      </blockquote>
+
+      <p>
+        Another pattern worth noting: putting your phone in another room, the
+        most common strategy students try, worked for about half of respondents
+        and failed for the other half. One student explained the gap:
       </p>
-    </div>
+      <blockquote class="pullquote">
+        It works more often than not, but getting myself to do that in the first
+        place is the hard part.
+      </blockquote>
+
+      <p>
+        These findings are what changed our hypothesis. You can read about that
+        in the <a href="/devlog">devlog</a>.
+      </p>
+
+      <p class="muted">
+        Limitations: our sample is small, comes from one school, and skews
+        toward high-performing students (21 of 30 reported A averages).
+        Respondents were recruited through personal networks. We treat these
+        results as directional, not conclusive.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>Annotated Reading List</h2>
+      <p>
+        Sources shaping our thinking. We are deliberately including sources that
+        challenge our hypothesis, not just ones that support it.
+      </p>
+
+      {
+        readingGroups.map((group) => (
+          <div class="group">
+            <h3>{group.heading}</h3>
+            {group.items.map((item) => (
+              <div class="source">
+                <p class="citation">{item.title}</p>
+                <p class="annotation">{item.note}</p>
+              </div>
+            ))}
+          </div>
+        ))
+      }
+
+      <div class="group">
+        <h3>Background reading</h3>
+        <p class="muted">
+          We also read overview articles from HealthCentral and Cerebral on FOMO
+          psychology. These are not peer-reviewed, so we treat them as
+          orientation rather than evidence.
+        </p>
+      </div>
+
+      <div class="group">
+        <h3>What is still missing</h3>
+        <p class="muted">
+          We know we still need sources on gamification's track record in
+          education, on adolescent attention specifically, and more sources that
+          challenge our current hypothesis. That is the next round of reading.
+        </p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Final Paper</h2>
+      <p class="muted">
+        Not yet complete. Target completion: January 2027. It will be posted
+        here as a PDF when finished, under an open license.
+      </p>
+    </section>
   </div>
 </Base>
 
 <style>
   .block {
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 
   .block:last-child {
     margin-bottom: 0;
   }
 
-  .block-label {
+  .findings {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .findings li {
+    font-family: var(--font-serif);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .findings li:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pullquote {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.55;
+    font-style: italic;
+    color: var(--foreground);
+    margin: 1.25rem 0;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--primary);
+  }
+
+  .group {
+    margin-top: 2rem;
+  }
+
+  .group h3 {
+    font-size: 0.8rem;
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    letter-spacing: 0.16em;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--muted-foreground);
     margin: 0 0 1rem;
-  }
-
-  .note {
-    font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-style: italic;
-    color: var(--muted-foreground);
-    margin-top: -0.5rem;
   }
 
   .source {
     padding-left: 1rem;
     border-left: 2px solid var(--border);
     margin-bottom: 1.5rem;
-  }
-
-  .source:last-child {
-    margin-bottom: 0;
   }
 
   .citation {
