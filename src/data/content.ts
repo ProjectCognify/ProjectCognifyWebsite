@@ -191,6 +191,7 @@ export const devlogPosts: DevlogPost[] = [
 export interface TeamMember {
   name: string;
   role: string;
+  focus: string;
   bio: string[];
   quote: string;
 }
@@ -199,6 +200,7 @@ export const team: TeamMember[] = [
   {
     name: "Jonathan",
     role: "Founder",
+    focus: "Research • Ideas • Writing",
     bio: [
       "Jonathan started Project Cognify after asking a simple question: Why is it so easy to spend hours on a game, but so difficult to focus on homework?",
       "That question sparked the project and continues to guide its direction. He enjoys researching ideas, asking questions, and understanding how technology and human behavior influence the way we learn.",
@@ -208,6 +210,7 @@ export const team: TeamMember[] = [
   {
     name: "Jeremy",
     role: "Co-Founder",
+    focus: "Engineering • Design • Building",
     bio: [
       "Jeremy enjoys solving problems and turning ideas into something people can actually use. As the project moves from research into design and development, he's excited to help bring the team's ideas to life.",
     ],
@@ -216,6 +219,7 @@ export const team: TeamMember[] = [
   {
     name: "Ryan",
     role: "Co-Founder",
+    focus: "Outreach • Interviews • Communication",
     bio: [
       "Ryan enjoys working with people and sharing ideas. He helps document the team's progress, gather feedback, and communicate what Project Cognify is learning along the way.",
     ],

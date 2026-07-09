@@ -5,21 +5,6 @@ import { team } from "../data/content";
 
 <Base title="Meet the Team">
   <h1>Meet the Team</h1>
-  <p class="label">Three friends. One question. Countless conversations.</p>
-
-  <div class="prose intro">
-    <p>
-      We're three high school students who share an interest in technology,
-      video games, and studying. We started Project Cognify with one
-      observation, but it's grown into more through careful research,
-      collaboration, and a willingness to fight our own assumptions.
-    </p>
-    <p>
-      While each of us contributes in different ways, every major decision is
-      made together. From coming up with ideas to reviewing research, running
-      surveys, and building our product, it would be impossible to imagine Project Cognify as is without any of us.
-    </p>
-  </div>
 
   <div class="members">
     {
@@ -30,6 +15,7 @@ import { team } from "../data/content";
               <span class="member__name">{member.name}</span>
               <span class="member__role">{member.role}</span>
             </p>
+            <p class="member__focus">{member.focus}</p>
             {member.bio.map((para) => (
               <p class="member__bio">{para}</p>
             ))}
@@ -49,17 +35,29 @@ import { team } from "../data/content";
     </p>
     <p>We're excited to see what's next.</p>
   </section>
+
+  <div class="prose intro">
+    <p>
+      We're three high school students who share an interest in technology,
+      video games, and studying. We started Project Cognify with one
+      observation, but it's grown into more through careful research,
+      collaboration, and a willingness to fight our own assumptions.
+    </p>
+    <p>
+      While each of us contributes in different ways, every major decision is
+      made together. From coming up with ideas to reviewing research, running
+      surveys, and building our product, it would be impossible to imagine
+      Project Cognify as is without any of us.
+    </p>
+  </div>
 </Base>
 
 <style>
-  .intro {
-    margin: 2.5rem 0 3.5rem;
-  }
-
   .members {
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
+    margin-top: 2.5rem;
   }
 
   .member {
@@ -74,12 +72,13 @@ import { team } from "../data/content";
     display: flex;
     align-items: baseline;
     gap: 0.85rem;
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.25rem;
   }
 
   .member__name {
     font-family: var(--font-serif);
     font-size: 1.1rem;
+    font-weight: 600;
   }
 
   .member__role {
@@ -87,6 +86,14 @@ import { team } from "../data/content";
     font-size: 0.75rem;
     letter-spacing: 0.03em;
     color: var(--muted-foreground);
+  }
+
+  .member__focus {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: var(--muted-foreground);
+    margin: 0 0 0.9rem;
   }
 
   .member__bio {
@@ -109,4 +116,9 @@ import { team } from "../data/content";
     border-top: 1px solid var(--border);
   }
 
+  .intro {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+  }
 </style>
