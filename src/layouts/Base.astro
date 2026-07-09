@@ -13,8 +13,8 @@ const {
   description = "Project Cognify is a student research project investigating adolescent focus and attention in an age of engineered distraction.",
 } = Astro.props;
 
-// Home keeps the brand name; every other page uses its bare title.
-const fullTitle = title;
+const fullTitle =
+  title === "Project Cognify" ? title : `${title} — Project Cognify`;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL("/og-image.png", Astro.site).href;
