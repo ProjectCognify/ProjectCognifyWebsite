@@ -17,7 +17,7 @@ const {
 // as-is; every other page gets "— Project Cognify" appended.
 const fullTitle = title.includes("Project Cognify")
   ? title
-  : `${title} — Project Cognify`;
+  : `${title} | Project Cognify`;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const ogImage = new URL("/og-image.png", Astro.site).href;
