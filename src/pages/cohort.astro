@@ -4,49 +4,92 @@ import Base from "../layouts/Base.astro";
 
 <Base title="Cohort">
   <h1>Cohort</h1>
-  <p class="label">Our current research instrument</p>
+  <p class="label">Our first research prototype</p>
 
   <div class="prose">
+    <h2>Why We Built Cohort</h2>
     <p>
-      Cohort is an app we're building to test our
-      hypothesis: Do others also studying around you improve focus among high
-      school students without competition, leaderboards, points, or any other type of
-      gamification?
+      As we reviewed research, surveyed students, and conducted interviews, one
+      idea kept appearing.
     </p>
     <p>
-      The app is small on purpose. A student creates or joins a session with
-      3 to 6 friends, each participant can see who else is present and whether
-      they are currently marked as focusing, and the only information shared is who is here and whether they are working.
+      Students often said it was easier to stay focused when they knew other
+      people were studying too. Academic research pointed in a similar
+      direction, suggesting that social presence and accountability can
+      influence attention and motivation.
+    </p>
+    <p>That led us to a simple question:</p>
+    <p>
+      Can simply knowing your friends are studying alongside you make it easier
+      to stay focused?
+    </p>
+    <p>Cohort is our first attempt to explore that question.</p>
+
+    <h2>Keeping It Simple</h2>
+    <p>
+      Most study apps include points, streaks, leaderboards, achievements, or
+      other forms of gamification.
+    </p>
+    <p>We intentionally left those out.</p>
+    <p>
+      A student creates or joins a study session with three to six friends.
+      During the session, everyone can see who is present and who has marked
+      themselves as focusing.
+    </p>
+    <p>That's it.</p>
+    <p>
+      There are no scores to chase, no rankings to climb, and no rewards to
+      earn.
     </p>
     <p>
-      This simpler app is for research purposes, not for the product.
-      If we added competition, we could not know whether
-      focus improvement came from other's presence or from gamification.
+      The goal isn't to build the most feature-rich study app. The goal is to
+      isolate one idea and understand whether shared social presence alone can
+      make a meaningful difference.
     </p>
 
-    <div class="panel">
-      <p class="panel__label">Current status</p>
-      <p class="panel__body">
-        Cohort is in development. We plan to run structured testing sessions with
-        volunteer students during the exam period in October and November 2026.
-        We will report results in the devlog.
-      </p>
-    </div>
+    <h2>Why It Matters</h2>
+    <p>
+      If we added points, badges, or competition, we wouldn't know what was
+      actually improving focus.
+    </p>
+    <p>Was it because students knew their friends were studying?</p>
+    <p>Or because they wanted to win?</p>
+    <p>
+      By keeping Cohort intentionally simple, we can test one variable at a time
+      and let the results guide what comes next.
+    </p>
+
+    <h2>Current Status</h2>
+    <p>Cohort is currently in development.</p>
+    <p>
+      This fall, we'll invite volunteer high school students to use Cohort
+      during the exam period. Alongside testing the prototype, we'll collect
+      feedback, observe how students actually use it, and compare the results
+      with what we learned during our research phase.
+    </p>
+    <p>
+      Whether our hypothesis is supported or challenged, we'll publish what we
+      learn on this website.
+    </p>
 
     <p class="links">
-      <span class="muted">GitHub: coming soon</span>
-      <span class="muted">Live version: not yet available</span>
+      <span class="muted">GitHub: Coming soon</span>
+      <span class="muted">Live Prototype: Coming soon</span>
     </p>
   </div>
 </Base>
 
 <style>
+  .prose h2 {
+    margin-top: 3rem;
+  }
+
   .links {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     font-family: var(--font-sans);
     font-size: 0.875rem;
-    margin-top: 0.25rem;
+    margin-top: 2.5rem;
   }
 </style>
