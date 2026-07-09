@@ -81,12 +81,60 @@ const readingGroups = [
 
   <div class="prose">
     <section class="block">
+      <h2>Survey Findings</h2>
+      <p>
+        We surveyed 30 students across three grade levels in June 2026. Full
+        summary statistics and charts are coming in August, and anonymized raw
+        data will be available for download alongside the final paper. Four
+        results already stand out:
+      </p>
+
+      <ul class="findings">
+        {
+          findings.map((f) => (
+            <li>
+              <strong>{f.lead}</strong> {f.rest}
+            </li>
+          ))
+        }
+      </ul>
+
+      <p>One student described their strategy this way:</p>
+      <blockquote class="pullquote">
+        I end up waiting until the last moment and then finish everything. That
+        panic makes me focus better.
+      </blockquote>
+
+      <p>
+        Another pattern worth noting: putting your phone in another room, the
+        most common strategy students try, worked for about half of respondents
+        and failed for the other half. One student explained the gap:
+      </p>
+      <blockquote class="pullquote">
+        It works more often than not, but getting myself to do that in the first
+        place is the hard part.
+      </blockquote>
+
+      <p>
+        These findings are what changed our hypothesis. You can read about that
+        in the <a href="/devlog">devlog</a>.
+      </p>
+
+      <p class="muted">
+        Limitations: our sample is small, comes from one school, and skews
+        toward high-performing students (21 of 30 reported A averages).
+        Respondents were recruited through personal networks. We treat these
+        results as directional, not conclusive.
+      </p>
+    </section>
+
+    <section class="block">
       <h2>Annotated Reading List</h2>
       <p>
         Sources shaping our thinking. We are deliberately including sources that
         challenge our hypothesis, not just ones that support it.
       </p>
-    </section>
+
       {
         readingGroups.map((group) => (
           <div class="group">
@@ -109,6 +157,16 @@ const readingGroups = [
           orientation rather than evidence.
         </p>
       </div>
+
+      <div class="group">
+        <h3>What is still missing</h3>
+        <p class="muted">
+          We know we still need sources on gamification's track record in
+          education, on adolescent attention specifically, and more sources that
+          challenge our current hypothesis. That is the next round of reading.
+        </p>
+      </div>
+    </section>
 
     <section class="block">
       <h2>Final Paper</h2>
