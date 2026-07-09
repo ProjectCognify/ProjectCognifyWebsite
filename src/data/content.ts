@@ -212,9 +212,9 @@ export const team: TeamMember[] = [
     role: "Co-Founder",
     focus: "Engineering • Design • Building",
     bio: [
-      "Jeremy enjoys solving problems and turning ideas into something people can actually use. As the project moves from research into design and development, he's excited to help bring the team's ideas to life.",
+      "Despite challenges he faces during building and design, Jeremy attempts to reach a result molded around his team's ideas. He attempts to take the miniscule aspects of the design into consideration, as well as pouring hours into the development of the project. Overall, Jeremy is a hardworking yet capable individual who strives to put his all into the project.",
     ],
-    quote: "Every solution starts with understanding the problem.",
+    quote: "Keep reaching toward your goals, they're (most likely) never too far out of reach.",
   },
   {
     name: "Ryan",
