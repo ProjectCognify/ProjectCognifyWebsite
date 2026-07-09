@@ -38,8 +38,12 @@ import { devlogPosts } from "../data/content";
           <article class="entry">
             <p class="meta">
               <time datetime={post.dateISO}>{post.date}</time>
-              <span>—</span>
-              <span>{post.author}</span>
+              {post.author && (
+                <>
+                  <span>—</span>
+                  <span>{post.author}</span>
+                </>
+              )}
             </p>
             <h3>
               <a href={`/devlog#${post.id}`}>{post.title}</a>

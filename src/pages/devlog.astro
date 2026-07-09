@@ -14,8 +14,12 @@ import { devlogPosts } from "../data/content";
           {i > 0 && <hr class="post__rule" />}
           <p class="meta">
             <time datetime={post.dateISO}>{post.date}</time>
-            <span>—</span>
-            <span>{post.author}</span>
+            {post.author && (
+              <>
+                <span>—</span>
+                <span>{post.author}</span>
+              </>
+            )}
           </p>
           <h2 class="post__title">{post.title}</h2>
           {post.body.map((block) =>
