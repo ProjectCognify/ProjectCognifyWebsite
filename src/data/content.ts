@@ -22,13 +22,13 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-07-08",
     title: "Finding a Home for Project Cognify",
     excerpt:
-      "By the end of Phase I, we had research findings, survey results, interview notes, meeting notes and ideas scattered across notebooks, Google Docs, and different folders.",
+      "By the end of Phase I, our research findings, survey results, interview notes, and half-finished ideas were scattered across three different Google Docs folders and a stack of notebooks.",
     body: [
-      "By the end of Phase I, we had research findings, survey results, interview notes, meeting notes and ideas scattered across notebooks, Google Docs, and different folders.",
-      "We realized we needed more than a place to store files. We needed a place that told the story of the project.",
-      "This website isn't meant to be a portfolio or a showcase. It's a record of how our thinking evolves as we move from questions to research, and eventually to building and testing.",
-      "As we begin Phase II, we'll continue documenting the questions we ask, the decisions we make, and the evidence behind them.",
-      "Our hope is that, by the time Project Cognify is complete, someone can read these pages from beginning to end and understand not only what we built, but why we built it.",
+      "By the end of Phase I, our research findings, survey results, interview notes, and half-finished ideas were scattered across three different Google Docs folders and a stack of notebooks. None of us could find anything anymore.",
+      "What we actually needed wasn't better file organization. It was somewhere that could hold the story of the project, not just the files.",
+      "So this site isn't really a portfolio. It's closer to a running record of how our thinking has changed as we've gone from asking questions to running a survey to (eventually) building something.",
+      "Phase II starts now, and we're planning to keep writing this stuff down as we go, even the parts that don't make us look like we knew what we were doing.",
+      "If it works, someone should be able to read this front to back later and understand not just what Cohort ended up being, but why it ended up that way.",
     ],
   },
   {
@@ -37,21 +37,19 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-07-05",
     title: "How the Research Changed Our Hypothesis",
     excerpt:
-      "By this point, we had completed our literature review and collected responses from our student survey. As we looked at everything together, one pattern kept appearing.",
+      "By this point we'd finished the literature review and had responses back from the survey. Once we actually sat down and looked at it all together, one pattern kept showing up.",
     body: [
-      "By this point, we had completed our literature review and collected responses from our student survey. As we looked at everything together, one pattern kept appearing.",
-      "Our original hypothesis focused heavily on FOMO. But the research pointed us toward something broader.",
-      "Words like motivation, social presence, and accountability showed up repeatedly, both in the academic literature and in what students shared with us. The more evidence we gathered, the more we realized our original question might have been too narrow.",
-      "Instead of asking,",
+      "By this point we'd finished the literature review and had responses back from the survey. Once we actually sat down and looked at it all together, one pattern kept showing up, and it wasn't the one we went in looking for.",
+      "We'd built our original hypothesis around FOMO, but the data didn't really back that up. Motivation and something closer to social presence kept coming up instead, in the papers and in what students told us.",
+      "So the question shifted. We started out asking",
       { quote: "Can FOMO help students stay focused?" },
-      "we found ourselves asking a different question:",
+      "and ended up asking something closer to",
       {
         quote:
           "Can simply knowing that other students are working alongside you make it easier to stay engaged?",
       },
-      "That became the focus of our next phase of research.",
-      "One thing we've learned so far is that research isn't about proving your original idea. It's about following the evidence, even when it leads you somewhere unexpected.",
-      "This became our second hypothesis.",
+      "which became the focus for the next phase.",
+      "Neither of us loved dropping the original idea, honestly — we'd been talking about it for months. But the whole point of doing the research first was to let it change our minds if it needed to, and apparently it needed to.",
     ],
   },
   {
@@ -60,14 +58,11 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-06-15",
     title: "What We Found in the Survey Findings",
     excerpt:
-      "After weeks of preparation, our survey finally went live. This was the first time we were hearing perspectives beyond our own.",
+      "After weeks of drafting and redrafting questions, our survey finally went live, and for the first time we were hearing opinions that weren't our own.",
     body: [
-      "After weeks of preparation, our survey finally went live.",
-      "This was the first time we were hearing perspectives beyond our own.",
-      "Some responses confirmed what we expected. Others challenged our assumptions completely.",
-      "Many students described procrastination in ways we hadn't considered. Some said they lost focus because they felt overwhelmed or didn't know where to start. Others told us they actually focused better when they knew their friends were studying at the same time, even if they weren't studying together.",
-      "The more responses we read, the less interested we became in proving our original hypothesis.",
-      "Instead, we found ourselves asking better questions and trying to understand what was really happening.",
+      "After weeks of drafting and redrafting questions, our survey finally went live, and for the first time we were hearing opinions that weren't our own.",
+      "Some of it confirmed what we expected. A lot of it didn't. Students described losing focus in ways we hadn't really thought about — feeling overwhelmed, not knowing where to start, or (the one that surprised us) actually focusing better just knowing their friends were studying at the same time, even without talking to them.",
+      "By the time we'd read through most of the responses, we'd basically stopped caring whether our original hypothesis was right. We were more interested in the questions the answers were raising.",
     ],
   },
   {
@@ -76,14 +71,12 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-05-20",
     title: "Why We Started Sharing Everything",
     excerpt:
-      "One question we kept asking ourselves was whether we should wait until we had results before talking about the project. In the end, we decided not to.",
+      "We went back and forth on whether to wait until we had actual results before posting anything about the project. We decided waiting didn't make much sense.",
     body: [
-      "One question we kept asking ourselves was whether we should wait until we had results before talking about the project.",
-      "In the end, we decided not to.",
-      "We started our Instagram because we wanted to document the whole process, not just the finished product. That means sharing the questions we're asking, the ideas that don't work out, the things that surprise us, and the moments that change how we think.",
-      "Research doesn't always go the way you expect. Sometimes you end up with a completely different question than the one you started with, and that's part of the process.",
-      "Project Cognify is about learning. We think sharing that learning is just as important as whatever we end up building.",
-      "Hopefully, by sharing our journey, other students can follow along, learn something new, or maybe even get inspired to start a project of their own.",
+      "We went back and forth on whether to wait until we had actual results before posting anything about the project. We decided waiting didn't make much sense.",
+      "The Instagram exists because we wanted people to see the process, not just whatever we end up shipping — the dead-end ideas, the surveys we had to redo, the stuff that surprised us along the way.",
+      "Research doesn't move in a straight line. Sometimes you end up with a totally different question than the one you started with, and we'd rather show that messiness than hide it.",
+      "If someone reading this ends up learning something from watching us mess around with a research project, or wants to go start their own, that's honestly as good an outcome as Cohort actually working.",
     ],
   },
   {
@@ -112,9 +105,8 @@ export const devlogPosts: DevlogPost[] = [
       "Like most student projects, our first instinct was to start making a product.",
       "Idle, action, puzzle, strategy, plenty of fun game ideas came to mind.",
       "But we realized that without a confirmed problem, none of those ideas would go anywhere.",
-      "So we made a decision that has influenced every step since: we wouldn't build anything until we had spent time understanding the problem first.",
-      "That meant reading existing research, designing surveys, conducting interviews, and letting the evidence shape whatever came next, even when the research wasn't fun.",
-      "Looking back, this was probably the most important decision we made.",
+      "So we made a call that ended up shaping everything after it: no building until we actually understood the problem. That meant reading research, writing survey questions, and doing interviews before touching any code, which was a lot less fun than it sounds.",
+      "Looking back, it's the one decision from this whole project I'd defend without hesitation.",
     ],
   },
   {
@@ -127,11 +119,8 @@ export const devlogPosts: DevlogPost[] = [
     body: [
       'For the first few weeks, we called it Project Focus. Whenever we talked about it, we just called it "the focus project."',
       "As the idea became more defined, we realized it deserved its own identity.",
-      "After brainstorming a long list of possibilities, Jeremy brought up the idea and we landed on Project Cognify. We liked that it reflected what we were trying to understand. Not just productivity, but how people think, focus, and stay engaged.",
-      "Around the same time, Jeremy also designed our first logo.",
-      "For the first time, the project felt real.",
-      "It no longer felt like an interesting idea we talked about after school. It felt like something we were genuinely committed to building, researching, and sharing with others.",
-      "That was the moment we realized Project Cognify had become more than a conversation. It had become something worth investing our time in.",
+      "We went through a long, mostly bad list of name ideas before Jeremy suggested Cognify, and it stuck. It fit what we were actually trying to understand — less about productivity hacks, more about how people think and stay engaged.",
+      "Jeremy also put together our first logo around then, which is when this stopped feeling like something we talked about after school and started feeling like a real commitment.",
     ],
   },
   {
