@@ -16,6 +16,21 @@ export interface DevlogPost {
 
 // Newest first — the Devlog and home page both read this order.
 export const devlogPosts: DevlogPost[] = [
+    {
+    id: "working-on-cohort",
+    date: "August 2026",
+    dateISO: "2026-08-30",
+    title: "What We've Been Doing This Summer",
+    excerpt:
+      "Concerning Cohort, its release, and what we'll do afterwards.",
+    body: [
+      "Here at Project Cognify, we've been hard at work working on Cohort; A video call service dedicated to helping students study as best they can utilizing FOMO.",
+      "We haven't had much time this summer, but it's getting closer to the point where we can release an Alpha version of the product confidently everyday. Already, we've gone over multiple versions of prototypes to build and ideas to test out. (All backed by research of course.)",
+      "After the Alpha version releases sometime in September to October, we plan to start testing it to see if using it has any actual results. Due to testing reasons, we plan to make this invite-only when it releases.",
+      "To elaborate on the previously stated testing, this would be the start of Phase III, where multiple people would be tested using cohort for research concerning if Cohort could have any real world usage.",
+      "We cannot provide a specific date of release at this time, so thank you for your continued patience.",
+    ],
+  },
   {
     id: "finding-a-home",
     date: "July 2026",
