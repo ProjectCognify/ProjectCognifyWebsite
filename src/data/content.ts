@@ -85,13 +85,11 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-05-05",
     title: "Designing the Survey",
     excerpt:
-      "Designing a survey turned out to be much harder than we expected. Writing questions isn't difficult. Writing questions that don't push people toward an answer is.",
+      "I figured writing a survey would take an afternoon. It took closer to three weeks, mostly because every question I wrote turned out to be leading people toward an answer without my noticing.",
     body: [
-      "Designing a survey turned out to be much harder than we expected.",
-      "Writing questions isn't difficult. Writing questions that don't accidentally push people toward a particular answer is.",
-      "Every time we thought we had a good question, we'd realize it assumed something we hadn't actually proven yet.",
-      "Around the same time, we started meeting regularly as a team. I drafted the survey questions, and Jeremy and Ryan gave input that sharpened them. Weekly discussions became less about assigning work and more about challenging each other's assumptions before moving forward.",
-      "The project started feeling less like an idea and more like a real research study.",
+      "I figured writing a survey would take an afternoon. It took closer to three weeks, mostly because every question I wrote turned out to be leading people toward an answer without my noticing — I'd reread something and realize it only made sense if you already assumed FOMO was the answer.",
+      "This is also around when we started actually meeting on a regular schedule instead of just texting whenever. I'd bring a draft, and Jeremy and Ryan would pick it apart, less \"good job\" and more \"wait, why are you assuming that.\"",
+      "It stopped feeling like a group project and started feeling like we were actually trying to find something out.",
     ],
   },
   {
@@ -106,7 +104,7 @@ export const devlogPosts: DevlogPost[] = [
       "Idle, action, puzzle, strategy, plenty of fun game ideas came to mind.",
       "But we realized that without a confirmed problem, none of those ideas would go anywhere.",
       "So we made a call that ended up shaping everything after it: no building until we actually understood the problem. That meant reading research, writing survey questions, and doing interviews before touching any code, which was a lot less fun than it sounds.",
-      "Looking back, it's the one decision from this whole project I'd defend without hesitation.",
+      "It's slowed us down more than once since then, and it's still the one call from this whole project I wouldn't take back.",
     ],
   },
   {
@@ -129,15 +127,11 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-03-20",
     title: "Getting the Team Together",
     excerpt:
-      "I knew I wanted to work with a team. When I shared the idea, neither of them asked what app we were going to build. They asked what we actually knew.",
+      "I didn't want to do this alone, so the first person I called was Jeremy, and the two of us called Ryan before we'd even really decided what we were building.",
     body: [
-      "I knew I wanted to work with a team.",
-      "Jeremy and Ryan had worked with me during a game jam the previous year. We approached problems differently, but we worked well together. More importantly, everyone was willing to challenge ideas instead of simply agreeing with them.",
-      "When I shared the idea behind Project Cognify, neither of them asked what app we were going to build.",
-      "They asked what we actually knew.",
-      'It turned out the honest answer was "not much."',
-      "In that moment, I knew they understood.",
-      "That conversation ended up shaping the project more than any feature discussion we had afterward.",
+      "I didn't want to do this alone, so the first person I called was Jeremy, and the two of us called Ryan before we'd even really decided what we were building. We'd worked together on a game jam the year before, and even though we don't think about problems the same way at all, none of us were the type to just nod along with whatever someone else said.",
+      "When I actually explained the idea, neither of them asked what app we were going to build. Ryan just asked what we actually knew about the problem so far. The honest answer was \"not much,\" and somehow that was the answer that made me want to keep going with them specifically.",
+      "That one conversation probably shaped the project more than any single feature discussion we've had since.",
     ],
   },
   {
@@ -146,16 +140,15 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-03-05",
     title: "Was It Worth Investigating?",
     excerpt:
-      "It was just an idea at first. Over time I started to consider it more and more until it eventually became something I wanted to act on.",
+      "For a couple of weeks it was just something I brought up occasionally, not really a project. Then I started actually reading about it, and it turned into one.",
     body: [
-      "It was just an idea at first.",
-      "Over time I started to consider it more and more until it eventually became something I wanted to do something about.",
-      "Because of this new desire for action I started reading about attention, motivation, and the fear of missing out. My first hypothesis slowly took shape.",
+      "For a couple of weeks it was just something I brought up occasionally, not really a project. Then I started actually reading about it, and it turned into one.",
+      "I went down a rabbit hole on attention, motivation, and FOMO specifically, since that's the angle that made the most intuitive sense to me at the time.",
       {
         quote:
           "What if the same psychological forces that keep people engaged in games could also be used to help students stay focused while learning?",
       },
-      "The hypothesis felt right at the time, but I had to make sure it was correct.",
+      "That was the hypothesis I started with. It felt obviously right at the time, which in hindsight probably should have made me more suspicious of it, not less.",
     ],
   },
   {
@@ -164,15 +157,14 @@ export const devlogPosts: DevlogPost[] = [
     dateISO: "2026-02-15",
     title: "How It All Started",
     excerpt:
-      "Project Cognify started with a game night. One night, Jeremy and I stayed up until 2 AM playing a newly released game.",
+      "Jeremy and I stayed up until 2 AM playing a newly released game one night, and the next morning I couldn't stop thinking about how those hours had just disappeared.",
     body: [
-      "Project Cognify started with a game night.",
-      "One night, Jeremy and I stayed up until 2 AM playing a newly released game. Afterward, I kept thinking about how those hours had just disappeared. Hours of studying never felt like that.",
+      "Jeremy and I stayed up until 2 AM playing a newly released game one night, and the next morning I couldn't stop thinking about how those hours had just disappeared. I've never once lost track of time studying like that.",
       {
         quote:
           "Why do some things hold our attention effortlessly, while others take everything we have?",
       },
-      "That question was probably the moment Project Cognify started.",
+      "That's the question I couldn't shake, and it's basically where this whole thing started.",
     ],
   },
 ];
