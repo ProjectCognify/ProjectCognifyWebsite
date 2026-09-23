@@ -16,7 +16,24 @@ export interface DevlogPost {
 
 // Newest first: the Devlog and home page both read this order.
 export const devlogPosts: DevlogPost[] = [
-    {
+  {
+    id: "Update-on-Cohort",
+    date: "September 2026",
+    dateISO: "2026-09-22",
+    title: "Going from Building to Testing",
+    excerpt:
+      "Our next steps after building Cohort.",
+    body: [
+      "After months of working on Cohort, we finally have a working version of the app.",
+      "It's been a lot of building and changing things, finding and fixing problems, and adapting. What started as an idea about studying alongside friends is now something we can actually use. ",
+      "Cohort has a main study hall where students can study quietly together, breakout rooms for smaller groups, personal study timers, and short check-ins after each session. The goal is to study alongside other students without turning it into another social media platform.",
+      "Just because we've built it doesn't mean we know if it works, however; our original questions was whether studying alongside other people could help students stay focused. We have our own opinions about it, but now we want to find out what happens when other students actually use Cohort.",
+      "But, we still need to know what happens when other students use Cohort and whether it really helps them.",
+      "Next stop, we'll be testing with school students to test Cohort hoping to get 30-100 people to join during the testing phase.",
+      "But before that, we plan to test with just the three of us, Ryan, Jeremy, and me, eventually expanding to more people.",
+    ],
+  },
+  {
     id: "working-on-cohort",
     date: "August 2026",
     dateISO: "2026-08-30",
