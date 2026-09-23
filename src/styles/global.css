@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------
-   Project Cognify — global styles
+   Project Cognify: global styles
    Tokens match the reference theme: pale-lavender ground, indigo ink
    and accent, DM Sans + Source Serif 4. No JS, no shadows, no
    gradients. Multi-page static site.
@@ -165,7 +165,7 @@ ol {
   color: var(--muted-foreground);
 }
 
-/* Date — author line above an entry */
+/* Date / author line above an entry */
 .meta {
   font-family: var(--font-sans);
   font-size: 0.75rem;

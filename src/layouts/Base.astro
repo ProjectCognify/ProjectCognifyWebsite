@@ -14,7 +14,7 @@ const {
 } = Astro.props;
 
 // Pages that already include the brand name (e.g. the home page) are used
-// as-is; every other page gets "— Project Cognify" appended.
+// as-is; every other page gets "| Project Cognify" appended.
 const fullTitle = title.includes("Project Cognify")
   ? title
   : `${title} | Project Cognify`;
