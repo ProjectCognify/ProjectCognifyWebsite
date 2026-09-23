@@ -29,8 +29,7 @@ export const devlogPosts: DevlogPost[] = [
       "Cohort has a main study hall where students can study quietly together, breakout rooms for smaller groups, personal study timers, and short check-ins after each session. The goal is to study alongside other students without turning it into another social media platform.",
       "Just because we've built it doesn't mean we know if it works, however; our original questions was whether studying alongside other people could help students stay focused. We have our own opinions about it, but now we want to find out what happens when other students actually use Cohort.",
       "But, we still need to know what happens when other students use Cohort and whether it really helps them.",
-      "Next stop, we'll be testing with school students to test Cohort hoping to get 30-100 people to join during the testing phase.",
-      "But before that, we plan to test with just the three of us, Ryan, Jeremy, and me, eventually expanding to more people.",
+      "Next, we'll be testing with school students to test Cohort hoping to get 30-100 people to join during the testing phase; But before that, we plan to test with just the three of us, Ryan, Jeremy, and me, eventually expanding to more people.",
     ],
   },
   {
