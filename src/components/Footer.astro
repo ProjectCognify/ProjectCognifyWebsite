@@ -1,9 +1,12 @@
 ---
 // Baked in at build time, so it updates automatically on every deploy.
+// Pinned to US Eastern so the date doesn't roll over early just because
+// Netlify's build servers run on UTC.
 const lastUpdated = new Date().toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
+  timeZone: "America/New_York",
 });
 ---
 
