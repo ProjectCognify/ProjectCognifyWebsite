@@ -1,5 +1,10 @@
 ---
-const lastUpdated = "July 8, 2026";
+// Baked in at build time, so it updates automatically on every deploy.
+const lastUpdated = new Date().toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 ---
 
 <footer class="site-foot">
