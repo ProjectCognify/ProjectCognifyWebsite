@@ -17,6 +17,22 @@ export interface DevlogPost {
 // Newest first: the Devlog and home page both read this order.
 export const devlogPosts: DevlogPost[] = [
   {
+    id: "Research-On-Cohort",
+    date: "October 2026",
+    dateISO: "2026-10-18",
+    title: "Reworking our research approach",
+    excerpt:
+      "How we've tried to remake Cohort's research method",
+    body: [
+      "In the past 2 months, we’ve started trying to get advice on our research methods.",
+      "From when we began thinking of, talking about, and creating Cohort, none of us were ever really properly trained or had any prior experience concerning how to create proper research.",
+      "That has recently begun to change with the introduction of a professor who, extremely kindly of him, decided to reach back out to us over a cold email.",
+      "Between us and him, we’ve begun to roughly brainstorm ideas for what to test, which I won’t put in here for privacy.",
+      "We’re planning to meet him soon for the first time, sometime this or next week, to discuss more about what we (me, Jeremy, and Ryan) plan to do.",
+      "Of course, we’re planning to use a fully structured study method in Cohort, shaping it to better encompass what we personally have in mind. If successful, this could be the start of sufficient proof that positive FOMO is good for studying and grades.",
+    ],
+  },
+  {
     id: "Update-on-Cohort",
     date: "September 2026",
     dateISO: "2026-09-22",
