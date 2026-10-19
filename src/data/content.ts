@@ -17,6 +17,22 @@ export interface DevlogPost {
 // Newest first: the Devlog and home page both read this order.
 export const devlogPosts: DevlogPost[] = [
   {
+    id: "Struggles-With-Testing",
+    date: "October 2026",
+    dateISO: "2026-10-18",
+    title: "Struggles with testing in public",
+    excerpt:
+      "What we're doing next with Cohort",
+    body: [
+      "We have been steadily approaching Cohort’s release to WHS students. However, there have been some issues that we had to deal with first.",
+      "Firstly, we cannot release Cohort without proper approval by the principal. We wanted a teacher to be our official advisor for Cohort, but we must get permission from WHS first. ",
+      "Secondly, we have been testing Cohort for our own studying, but we need to have a larger testing group to be able to fix bugs that are harder to find. ",
+      "Hopefully, with the principal’s approval, we will have advertising for Cohort testing, making it easier to get testers. In addition, we will most likely reach out to the people who took our survey.",
+      "Although our efforts have been put into the presentation, there is not really anything else we have to do with the application.",
+      "All in all, Cohort progress has been going well and we hope to see you again soon.",
+    ],
+  },
+  {
     id: "Research-On-Cohort",
     date: "October 2026",
     dateISO: "2026-10-18",
