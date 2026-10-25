@@ -265,7 +265,7 @@ export const team: TeamMember[] = [
     role: "Co-Founder",
     focus: "Outreach • Interviews • Communication",
     bio: [
-      "Ryan enjoys working with people and sharing ideas. He helps document the team's progress, gather feedback, and communicate what Project Cognify is learning along the way.",
+      "Ryan enjoys working with people and sharing ideas with the group. As the team's media lead, he helps document the team's progress, gather feedback, and communicate what Project Cognify is learning along the way. He further analyzes how our project can have a meaningful impact on others, which helps us determine our goals as we make changes throughout the development process.",
     ],
     quote: "Learning is better when you share the journey.",
   },
